@@ -72,3 +72,20 @@
     content: '';
     position: absolute;
   }
+  .actions{
+      position: absolute;
+      right:0px;
+      top:0px;
+      display:flex;
+      flex-direction: column;
+  }
+  .actions>button{
+      margin: 10px;
+      background: #ddd;
+      padding: 8px 10px;
+      border-color:none;
+  }
+  .actions>button.active{
+      border:1px solid red;
+  }
+  

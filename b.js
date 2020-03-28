@@ -1,4 +1,4 @@
-var result=`/*看到我的小可爱，你好呀
+var result=`/*看到我的小可爱,你好呀
  *今天是个美好的日子
  *送你一只皮卡丘吧
  */
@@ -103,20 +103,37 @@ var result=`/*看到我的小可爱，你好呀
     border-radius: 50px;
   }
 `
-
+let duration=50
 function writeCode(code){
     var domCode=document.querySelector('#code')
     var n=0
-    var id=setInterval(()=>{
-    n+=1
-    domCode.innerHTML=code.substring(0,n)
-    domCode.innerHTML=Prism.highlight(domCode.innerHTML,Prism.languages.css)
-    domCode.scrollTop = domCode.scrollHeight
-    styleTag.innerHTML=code.substring(0,n)
-        if(n>=code.length){
-        clearInterval(id)
+    setTimeout(function fn(){
+        n+=1
+        domCode.innerHTML=code.substring(0,n)
+        domCode.innerHTML=Prism.highlight(domCode.innerHTML,Prism.languages.css)
+        domCode.scrollTop = domCode.scrollHeight
+        styleTag.innerHTML=code.substring(0,n)
+        if(n<code.length){
+            setTimeout(fn,duration)//函数这里表示参数的时候不加（）
         }
-    },10)
+    },duration)
    
 }
 writeCode(result)
+$('.actions').on('click','button',function(e){
+    let $button=$(e.currentTarget)
+    let speed=$button.attr('data-speed')
+    console.log(speed)
+    $button.addClass('active').siblings('.active').removeClass('active')
+    switch(speed){
+        case 'slow':
+            duration=100;
+            break;
+        case 'normal':
+            duration=50;
+            break;
+        case 'fast':
+            duration=10;
+            break;
+    }
+})
