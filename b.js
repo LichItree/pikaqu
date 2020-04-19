@@ -1,13 +1,11 @@
-var result=`/*看到我的小可爱,你好呀
- *今天是个美好的日子
- *送你一只皮卡丘吧
+var result=`/*送你一只皮卡丘
  */
 
-/*鲜亮光滑的皮肤*/
+/*黄皮肤*/
 .preview{
     background:#FEE433;
 }
-/*小巧玲珑的鼻子*/
+/*小鼻子*/
 .nose{
     border:12px solid transparent;
     border-radius:50%;
@@ -17,7 +15,7 @@ var result=`/*看到我的小可爱,你好呀
     left:50%;
     transform:translateX(-50%);
     }
-/*可爱动人的大眼睛*/
+/*大眼睛*/
 .eye{
     width:49px;
     height:49px;
@@ -31,7 +29,7 @@ var result=`/*看到我的小可爱,你好呀
     left:50%;
     margin-left:90px;
 }
-/*眼里还要有星光*/
+/*撒点光*/
 .eye::before{
     width:24px;
     height:24px;
@@ -39,7 +37,7 @@ var result=`/*看到我的小可爱,你好呀
     border-radius:50%;
     left:8px;
   }
-/*脸要美美哒*/
+/*涂腮红*/
 .cheek{
     width:68px;
     height:68px;
@@ -55,7 +53,7 @@ var result=`/*看到我的小可爱,你好呀
     right:50%;
     margin-right:116px;
   }
-  /*嘴角要有欢喜*/
+  /*带点笑*/
 .upperLip{
     width:80px;
     height:20px;
